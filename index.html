@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .heart {
+        position: relative;
+        width: 220px;
+        height: 200px;
+        background: red;
+        transform: rotate(-45deg);
+        animation: beat 1s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 200px;
+        background: red;
+        border-radius: 50%;
+    }
+
+    .heart::before {
+        top: -110px;
+        left: 0;
+    }
+
+    .heart::after {
+        left: 110px;
+        top: 0;
+    }
+
+    .text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 28px;
+        font-weight: bold;
+        transform: rotate(45deg);
+        top: 70px;
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: rotate(-45deg) scale(1); }
+        50% { transform: rotate(-45deg) scale(1.1); }
+    }
+</style>
+</head>
+<body>
+
+<div class="heart">
+    <div class="text">HAPPY<br>BIRTHDAY ❤️</div>
+</div>
+
+</body>
+</html>
